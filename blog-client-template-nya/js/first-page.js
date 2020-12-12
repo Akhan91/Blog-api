@@ -8,8 +8,8 @@ async function fetchAllPosts() {
     try{
         let response = await fetch('http://localhost:3000/posts');
         // let response = await fetch('https://puns-app.herokuapp.com/puns');
-
         let data = await response.json();
+
         let bottomBorder = document.getElementsByClassName('bottom-border');
         
         let postsHTML = '';

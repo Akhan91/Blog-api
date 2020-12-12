@@ -6,13 +6,13 @@ window.onload = function(){
 async function fetchAllBlogs(){
 
     try{
-        let response = await fetch('https://puns-app.herokuapp.com/puns')
+        let response = await fetch('http://localhost:3000/posts')
         let data = await response.json();
 
 
         let manageHTML = '';
         let table = document.getElementById('tableBody');
-        for( let posts of data){
+        for (let posts of data){
             
             let postsDate = new Date(posts.date)
            manageHTML +=  `<tr>
@@ -23,8 +23,7 @@ async function fetchAllBlogs(){
            </tr>`
         }
         table.innerHTML = manageHTML;
-
-
+        
     }
     catch(message) {
         throw new Error(message);

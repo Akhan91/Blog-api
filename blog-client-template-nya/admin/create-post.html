@@ -3,31 +3,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/create-post.css">
 </head>
 <body>
 
-    <div id="container">
+    <div class="main-container" id="container">
 
 
         <nav>
-            <a href="../first-page.html">Blog Page</a>
+            <a href="../first-page.html" class="navbar">Blog Page</a>
         </nav>
         <h1>New Post</h1>
 
-        <label for="">Title</label>
-        <textarea name="content" id="title-textarea" cols="30" rows="1"></textarea>
-
-        <label for="">Author</label>
-        <textarea name="content" id="author-textarea" cols="30" rows="1"></textarea>
+        <label for=""></label>
+        <textarea name="content" id="title-textarea" cols="30" rows="1"placeholder ="Title"></textarea>
+        <br>
+        <label for=""></label>
+        <textarea name="content" id="author-textarea" cols="30" rows="1"placeholder ="Author"></textarea>
 
 
         <form id="create-pun-form">
-            <label for="">Content</label>
-            <textarea name="content" id="content-textarea" cols="30" rows="10"></textarea>
+            <label for="" class="content-title"></label>
+            <textarea name="content" id="content-textarea" cols="30" rows="10"placeholder ="Content"></textarea>
+            <br>
+            <div class="footer">
 
-            <input type="submit" value="Create">
-            <a href="manage-posts.html">&#x2190; back</a>
+                <input type="submit" value="Create" class= "create-button">
+                <a href="manage-posts.html" class="back-arrow">&#x2190; back</a>
+            </div>
         </form>
     </div>
 
