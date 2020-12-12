@@ -1,9 +1,10 @@
+
 html {
     box-sizing: border-box;
 }
 *, *:before, *:after {
     box-sizing: inherit;
-    background-color:rgb(149, 179, 245);
+    background-color: beige;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
     margin-right: 20px;
 }
 
-h2 {
+.border-line {
     height:100px;
     margin-left: auto;
     width: 850px;
@@ -34,9 +35,7 @@ h2 {
 }
 
 .bottom-border{
-    border-bottom: 1px dotted black;
+    border-top: 1px dotted black;
+    position: absolute;
 }
 
-.create-post {
-    float:right;
-}
