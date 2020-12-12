@@ -1,8 +1,8 @@
 const express = require ('express');         // Import 'express', a ligh-weight framework
 const app = express()                        // Init express and save it in "app" variable
-const mongoose = require ('mongoose');       // Import mongoose, a tool that gives NoSQL (such as MongoDB)
+const mongoose = require('mongoose');       // Import mongoose, a tool that gives NoSQL (such as MongoDB)
 const bodyParser = require ('body-parser'); // Import body-parser, To handle different type of formates
-const cors = require ('cors');              // Import cors, for allowing cross-origin request
+const cors = require('cors');              // Import cors, for allowing cross-origin request
 
 
 //Middleware
