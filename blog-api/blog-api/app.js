@@ -25,4 +25,4 @@ mongoose.connect(
 )
 
 //Listen to server
-app.listen (3000); // Listen through port 3000. This is what we write in our browser localhost
+app.listen (3000); // Listen through port 3000. This is what we write in our browser 'localhost:3000'
