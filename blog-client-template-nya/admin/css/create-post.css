@@ -20,7 +20,7 @@ h1 {
     margin-left: 50px;
 }
 .main-container {
-    height: 300px;
+    height: 500px;
     /* border: 2px solid black; */
     width: 800px;
     margin-left: 550px;
@@ -55,10 +55,13 @@ input {
 }
 .create-button {
     background-color: aliceblue;
+    margin: 2px 2px 0px 0px;
+    padding-left: 102px;
+    padding-right: 102px;
     
 }
 .back-arrow {
-    margin-left:350px;
+    margin-left:270px;
 }
 .footer {
     height: 100px;
