@@ -13,7 +13,7 @@ async function fetchAllPosts() {
         let bottomBorder = document.getElementsByClassName('bottom-border');
         
         let postsHTML = '';
-        for (posts of data) {
+        for (posts of data.reverse()) {
             console.log(posts)
             
             // Title of posts + post content
