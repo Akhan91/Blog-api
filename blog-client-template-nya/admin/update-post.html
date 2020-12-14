@@ -1,4 +1,4 @@
-<html lang="en">
+<!-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,48 @@
         </form>
     </div>
 
+
+    <script src="js/update-post.js"></script>
+</body>
+</html> -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/update-post.css">
+</head>
+<body>
+
+    <div class="main-container" id="container">
+
+        <nav>
+            <a href="../first-page.html" class="navbar">Blog Page</a>
+        </nav>
+        <h1>Update Post</h1>
+        <!-- Title area -->
+        <div id="updatedAlert"></div>
+        <label for=""></label>
+        <textarea name="title" id="title-textarea" cols="30" rows="1"placeholder ="Title"></textarea>
+        <br>
+
+        <!-- Author area -->
+        <label for=""></label>
+        <textarea name="author" id="author-textarea" cols="30" rows="1"placeholder ="Author"></textarea>
+
+        <!-- Content area -->
+        <form id="update-post-form">
+            <label for="" class="content-title"></label>
+            <textarea name="content" id="content-textarea" cols="30" rows="10"placeholder ="Content"></textarea>
+            <br>
+            <div class="footer">
+
+                <input type="submit" value="Update" class= "update-button">
+                <a href="manage-posts.html" class="back-arrow">&#x2190; back</a>
+            </div>
+        </form>
+    </div>
 
     <script src="js/update-post.js"></script>
 </body>
