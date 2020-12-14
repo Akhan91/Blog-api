@@ -22,7 +22,7 @@ async function fetchAllBlogs(){
            <td><p>${posts.title}</p></td>
            <td><p>${posts.author}</p></td>
            <td><p>${postsDate.getFullYear()}-${postsDate.getMonth()}-${postsDate.getDate()}</p></td>
-           <td class="actionTD"><a href="update-post.html?id=${posts['_id']}">Update</a><br></br><a class="delete-btn" href=#>Delete</a></td>
+           <td class="actionTD"><a href="update-post.html?id=${posts['_id']}">Update</a><br></br><a class="delete-btn" data-id="${posts['_id']}" href="#">Delete</a></td>
            </tr>`
         }
         table.innerHTML = manageHTML;
@@ -42,11 +42,11 @@ async function deleteEvent() {
         deleteBtn.addEventListener('click', async function(e) {
             e.preventDefault()
 
-            let postId = this.dataset.id
-            console.log(postId);
+            let punId = this.dataset.id
+            console.log(punId);
 
             try {
-                await fetch('http://localhost:3000/posts' + postId, {
+                await fetch('http://localhost:3000/posts/' + punId, {
                     method: 'DELETE', // GET, POST, PATCH, DELETE
                 });
 
