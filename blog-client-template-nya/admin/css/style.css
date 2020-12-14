@@ -46,23 +46,38 @@ h2 {
 table {
     border-collapse:collapse;
     width: 50%;
+    
 }
 
 table, th, tr, td {
     border: 1px solid black;
     background-color: white;
-  }
+    }
 
- td p {
-     background-color: white;
+td p {
+    background-color: white;
+    padding: 5px;
+    
+}
+    
+td a {
+    background-color: white;
+    padding: 5px;
+        /* margin:5px; */
+}
+
+.actionTD {
+    display: flex;
+    justify-content: space-between;
+    border: white;
+    padding: 10px;
  }
 
- td a {
-     background-color: white;
- }
+.update-manage-button {
+    margin-right: 25px;
+}
 
- .actionTD {
-     display: flex;
-     justify-content: space-between;
-     border: white;
- }
+.date-info {
+    /* padding: 20px; */
+    margin:20px;
+}
