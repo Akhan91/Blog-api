@@ -21,8 +21,10 @@ async function fetchAllBlogs(){
            manageHTML +=  `<tr>
            <td><p>${posts.title}</p></td>
            <td><p>${posts.author}</p></td>
-           <td><p>${postsDate.getFullYear()}-${postsDate.getMonth()}-${postsDate.getDate()}</p></td>
-           <td class="actionTD"><a href="update-post.html?id=${posts['_id']}">Update</a><br></br><a class="delete-btn" data-id="${posts['_id']}" href="#">Delete</a></td>
+           <td class="date-info"><p>${postsDate.getFullYear()}-${postsDate.getMonth()}-${postsDate.getDate()}</p></td>
+           <td class="actionTD">
+           <br>
+           <a href="update-post.html?id=${posts['_id']}" class ="update-manage-button">Update</a><br></br><a class="delete-btn" data-id="${posts['_id']}" href="#">Delete</a></td>
            </tr>`
         }
         table.innerHTML = manageHTML;
