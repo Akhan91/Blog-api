@@ -35,9 +35,17 @@ async function createPost(e) {
             body: JSON.stringify(object)
         });
 
-        // window.location.replace('index.html')
+        window.location.replace('manage-posts.html')
     } catch (message) {
         throw new Error(message);
     }
 }
 
+function formatFormData(formData) {
+    let obj = {};
+    for (let key of formData.keys()) {
+        obj[key] = formData.get(key);
+    }
+
+    return obj;
+}
