@@ -12,7 +12,7 @@ async function fetchAllBlogs(){
 
         let manageHTML = '';
         let table = document.getElementById('tableBody');
-        for (let posts of data){
+        for (let posts of data.reverse()){
             
             let postsDate = new Date(posts.date)
            manageHTML +=  `<tr>
