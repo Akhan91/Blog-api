@@ -59,8 +59,9 @@ td p {
     padding: 5px;
     
 }
-    
+
 td a {
+    text-decoration: none;
     background-color: white;
     padding: 5px;
         /* margin:5px; */
@@ -80,4 +81,27 @@ td a {
 .date-info {
     /* padding: 20px; */
     margin:20px;
+}
+
+
+/* A link that has not been visited */
+a:link {
+    color: blue;
+}
+/* A link that has been visited */
+a:visited {
+    color: purple;
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+.delete-btn:visited {
+    color:blue;
+}
+.delete-btn:hover {
+    color:red;
 }
