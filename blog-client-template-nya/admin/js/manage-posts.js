@@ -4,15 +4,13 @@ window.onload = function(){
 
 // Fetch request for all blog posts
 async function fetchAllBlogs(){
-
     try{
-        let response   = await fetch('http://localhost:3000/posts')
+        let response   = await fetch('http://localhost:3000/posts/')
         let data       = await response.json();
         let manageHTML = '';
         let table      = document.getElementById('tableBody');
 
-        for (let posts of data.reverse()){
-            
+        for (let posts of data.reverse()){    
         let postsDate = new Date(posts.date)
         manageHTML +=  
         `<tr>
@@ -21,16 +19,40 @@ async function fetchAllBlogs(){
             <td class="date-info"><p>${postsDate.getFullYear()}-${postsDate.getMonth()}-${postsDate.getDate()}</p></td>
             <td class="actionTD">
             <br>
-            <a href="update-post.html?id=${posts['_id']}" class ="update-manage-button">Update</a>
+            <a href="update-post.html?id=${posts['_id']}" class="update-manage-button">Update</a>
             <br></br>
-            <a href=#>Delete</a>
+            <a class="delete-btn" href=#>Delete</a>
             </td>
         </tr>`
         }
         table.innerHTML = manageHTML;
-        
-    }
-    catch(message) {
+
+    }catch(message) {
         throw new Error(message);
+    }
+    deleteEvent();
+}
+
+
+async function deleteEvent() {
+    let deleteBtns = document.getElementsByClassName('delete-btn');
+    for (let deleteBtn of deleteBtns) {
+        deleteBtn.addEventListener('click', async function(e) {
+            e.preventDefault()
+
+            let postId = this.dataset.id
+            console.log(postId);
+
+            try {
+                await fetch('http://localhost:3000/posts/' + postId, {
+                    method: 'DELETE',
+                });
+                console.log()
+                this.parentNode.parentNode.remove();
+            } catch (message) {
+                throw new Error(message);
+            }
+        
+        })
     }
 }

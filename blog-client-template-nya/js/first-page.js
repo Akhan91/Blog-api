@@ -31,11 +31,10 @@ async function fetchAllPosts() {
             <span class = "bottom-border"></h2>`; // Dotted line element from CSS
         }
         document.getElementById('post-list').innerHTML = postsHTML;
-   
+
     }catch (message) {
         throw new Error(message);
     }
-
     // Function which minimizes the string and only displays the first 100 chars of the posts.
     function minLetter() {
         if (posts['content'].length >= 100) {
