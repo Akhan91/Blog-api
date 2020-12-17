@@ -33,9 +33,12 @@ body {
     align-items: center;
 }
 
+.back-arrow {
+    margin-left:730px;
+}
+
 .bottom-border{
     border-top: 1px dotted black;
-    
 }
 
 a {
@@ -55,4 +58,8 @@ a:visited {
 a:hover {
     color: red;
     text-decoration: underline;
+}
+
+i {
+    line-height: 25px;
 }

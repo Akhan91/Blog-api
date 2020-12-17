@@ -21,7 +21,7 @@ async function fetchAllBlogs(){
             <br>
             <a href="update-post.html?id=${posts['_id']}" class="update-manage-button">Update</a>
             <br></br>
-            <a class="delete-btn" href=#>Delete</a>
+            <a class="delete-btn" data-id="${posts['_id']}" href=#>Delete</a>
             </td>
         </tr>`
         }
@@ -36,13 +36,14 @@ async function fetchAllBlogs(){
 
 async function deleteEvent() {
     let deleteBtns = document.getElementsByClassName('delete-btn');
+
+    // Create delete-buttons
     for (let deleteBtn of deleteBtns) {
         deleteBtn.addEventListener('click', async function(e) {
             e.preventDefault()
 
+            // the code below deletes the specific post
             let postId = this.dataset.id
-            console.log(postId);
-
             try {
                 await fetch('http://localhost:3000/posts/' + postId, {
                     method: 'DELETE',
@@ -52,7 +53,6 @@ async function deleteEvent() {
             } catch (message) {
                 throw new Error(message);
             }
-        
         })
     }
 }

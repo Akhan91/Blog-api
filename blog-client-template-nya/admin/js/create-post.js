@@ -14,8 +14,8 @@ async function createPost(e) {
 
     let object = {
         content: formData.get('content'), // When using formData get the element by 'name' and not by 'id or class'.
-        author: document.getElementById('author-textarea').value,
-        title: document.getElementById('title-textarea').value
+        author:  document.getElementById('author-textarea').value,
+        title:   document.getElementById('title-textarea').value
     }
 
     // Shows the title, author, content
