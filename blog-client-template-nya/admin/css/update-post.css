@@ -46,6 +46,7 @@ h1 {
     background-color: #ffffff;
     margin-top:5px;
     padding-top:5px;
+    line-height: 2em;
     
 }
 
@@ -53,7 +54,7 @@ input {
     margin-top: 10px;
     margin-left:120px;
 }
-.update-button {
+.create-button {
     background-color: aliceblue;
     margin: 2px 2px 0px 0px;
     padding-left: 102px;
@@ -68,3 +69,18 @@ input {
     width: 800px;
     
 }
+
+#select-tags {
+    width:246px;
+    /* background: aliceblue; */
+    overflow-y: hidden;
+}
+
+option{
+    background: #ffffff;
+}
+
+/* .title-heading {
+    position: auto;
+    margin-top:20px;
+} */
