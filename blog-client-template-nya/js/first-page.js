@@ -28,6 +28,8 @@ async function fetchAllPosts() {
             <p><span>Author: ${posts.author}</span></p>
             <p><span>Date: ${postsDate.getFullYear()}-${postsDate.getMonth()}-${postsDate.getDate()}</span></p>
             <br>
+            <p><span>Tags:${posts.tags}</span></p>
+            <br>
             <span class = "bottom-border"></h2>`; // Dotted line element from CSS
         }
         document.getElementById('post-list').innerHTML = postsHTML;
