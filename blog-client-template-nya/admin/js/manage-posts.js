@@ -17,6 +17,7 @@ async function fetchAllBlogs(){
             <td><p>${posts.title}</p></td>
             <td><p>${posts.author}</p></td>
             <td class="date-info"><p>${postsDate.getFullYear()}-${postsDate.getMonth()}-${postsDate.getDate()}</p></td>
+            <td><p>${posts.tags}</p></td>
             <td class="actionTD">
             <br>
             <a href="update-post.html?id=${posts['_id']}" class="update-manage-button">Update</a>
